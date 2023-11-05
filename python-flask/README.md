@@ -52,3 +52,20 @@ latest: digest: sha256:5ebd12de4c09de57d9bc13e7255d7151dd40823a9f37851c11b29afbe
 ❯
 ```
 
+## To run this web application as a pod on Kubernetes
+
+`kubectl run webapp --image=vineethac/python-flask-simple-webapp -n default`
+
+## To port forward the application from your localhost
+
+`kubectl port-forward pod/webapp -n default 8080:5000`
+
+## From the localhost machine you can open another terminal and verify
+```
+❯ curl http://127.0.0.1:8080      
+Welcome to flask!  
+❯   
+❯ curl http://127.0.0.1:8080/hello  
+Hello, this is a response from flask!  
+❯
+```
