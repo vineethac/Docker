@@ -11,10 +11,16 @@ curl
 wget
 nc
 netstat
+ifconfig
+route
+host
+arp
 iostat
 top
 free
 vmstat
+pmap
+mpstat
 python3
 pip
 ```
